@@ -6,11 +6,13 @@
 	<body ng-controller="githubController">
 
 	<form ng-submit="getUserData()">
-		<input ng-model='searchText' placeholder="enter username"></input>
+		<input type="text" ng-model='searchText' placeholder="enter username">
 		<button ng-click="getUserData()">Search</button>
 	</form>
 
 	{{user}}
+	<h1>User Name: {{user.login}}</h1>
+	<p> User Avatar: <img src={{user.avatar_url}}></img></p>
 
 		<script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js'></script>
 		<script src='app.js'></script>
